@@ -1,2 +1,2 @@
-language = "bash"
+language = "c++"
 run = "chmod +x run.sh; chmod +x test; ./run.sh"
