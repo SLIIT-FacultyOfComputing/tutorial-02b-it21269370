@@ -28,15 +28,15 @@ printf("Hello World") --> std::cout << "Hello World";
 
 2.54cm = 1 inch
 
-```c
-#include <stdio.h>
+```c++
+#include <iostream>
 void main(void) 
 {
     float cm, inches;
-    printf("Enter a length in cm : ");
-    scanf("%f",&cm);
+    std::cout << "Enter a length in cm : ";
+    std::cin >>"%f",&cm;
     inches = cm / 2.54;
-    printf("Length in inches is %f \n", inches);
+    std::count"Length in inches is %f \n", inches;
 }   
 ```
 
@@ -59,35 +59,36 @@ OtRate = 1700
 
 Please Note that the input command in C++ is std::cin. This is a representation of the Keyboard.
 
-```c
-#include <stdio.h>
-void main(void)
+```c++
+#include<iostream>
+int main()
 {
-   double salary, netSalary;
-   int etype, otHrs, otRate;
-   printf("Enter Employee Type : ");
-   scanf("%d", &etype);
-   printf("Enter Salary  : ");
-   scanf("%f", &salary);
-   printf("Enter OtHrs : ");
-   scanf("%d", &otHrs); 
-   
-   switch (etype) {
+  double salary, netSalary;
+  int    etype, othrs, otrate;
+  std::cout<< "Enter The Type of the Employee  : ";
+  std::cin>>etype;
+  std::cout<< "Enter The Salary  : ";
+  std::cin>>salary;
+  std::cout<<"Enter Over Time Hours  : ";
+  std::cin>>othrs;
+  
+  
+  switch (etype) {
       case 1 :
-          otRate = 1000;
+          otrate = 1000;
           break;
       case 2 :
-          otRate = 1500;
+          otrate = 1500;
           break;
       default :
-          otRate = 1700;
+          otrate = 1700;
           break;
    }
 
-
-   netSalary = salary + otHrs* otRate;
-   printf("Net Salary is %f ", netSalary);
-}
+    netSalary = salary + othrs** otrate;
+    std::cout<<"Net Salary is "<<netSalary<<std::endl;
+    std::cout<<std::endl;
+    
 ```
 
 ## Exercise 3 - Repeatition
@@ -97,22 +98,22 @@ Convert the C program given below which calculates the Factorial of a number tha
 
 Please Note that the input command in C++ is ```std::cin```. This is a representation of the Keyboard.
 
-```c
-#include <stdio.h>
+```c++
+#include <iostream>
 void main(void)
 {
     int no;
     long fac;
 
-    printf("Enter a Number : ");
-    scanf("%d", &no);
+    std::count <<"Enter a Number : ";
+    std::cin >>"%d", &no;
 
     fac = 1;
     for (int r=no; r >= 1; r--) {
         fac = fac * r;
     }
 
-    printf("Factorial of %d is %ld\n", no, fac);    
+    std::count >>"Factorial of %d is %ld\n", no, fac;    
 }
 ```
  
@@ -149,4 +150,25 @@ int main() {
   std::cout << std::endl;
 }
 ```
+```c++
+#include <iostream>
+
+long Factorial(int no);
+
+long nCr(int n, int r);
+
+int main() {
+  int n, r;
+  std::cout << "Enter a value for n ";
+  std::cin >> n;
+  std::cout << "Enter a value for r ";
+  std::cin >> r;
+
+  nCr = n!/ r!(n−r)!
+    
+  std::cout << "nCr = ";
+  std::cout << nCr(n,r);
+  std::cout << std::endl;
+  return 0;
+}
 
